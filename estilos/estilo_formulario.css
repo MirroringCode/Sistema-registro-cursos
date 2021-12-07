@@ -1,0 +1,141 @@
+html{ 
+    font-family: 'Josefin Sans', Arial;
+    src: url(fuentes/JosefinSans-VariableFont_wght.ttf);
+}
+
+body {
+    background: #f1f1f1;
+}
+
+.Contenedor-principal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: auto;
+}
+
+.contenedor-titulo {
+	background-color: transparent; 
+	width: 40%;
+	height: auto;
+	margin: 40px auto;
+	text-align: center;
+	font-weight: 900;
+}
+
+#titulo {
+	margin: auto 10%;
+	align-self: center;
+}
+
+#formulario_registro, #formulario_ingreso {
+        display: grid;
+        grid-area: auto;
+        /* border-style: solid; */
+        /* border-color: rgb(4, 82, 172); */
+        max-width: 60%;
+        max-height:70%;
+        /* background-color: rgba(63, 127, 201, 0.685); */
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        /* color: #ffffff; */
+        padding: 5%;
+        font-weight: 510;
+        font-size: 125%;
+        border-radius: 7px;
+}
+
+.direccion_texto {
+	text-align:left;
+	display: flex;
+	flex-direction: column;
+	padding: -25%;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+#ci {
+	margin: 10px 0px;
+	
+}
+
+#nombre {
+	margin: 10px 0px;
+	
+
+}
+#apellido {
+	margin: 10px 0px;
+	
+}
+
+#usuario {
+	margin: 10px 0px;
+	
+}
+
+#usuario {
+	margin: 10px 0px;
+	
+}
+
+#usuario {
+	margin: 10px 0px;
+	
+}
+
+#email {
+	margin: 10px 0px;
+	
+}
+
+#contraseña {
+	margin: 10px 0px;
+	
+}
+
+#segunda_contraseña {
+	margin: 10px 0px;
+	
+}
+
+#numero_telefonico {
+	margin: 10px 0px;
+	
+}
+
+.direccion-botones {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.boton-enviar, .boton-reset {
+	align-self: center;
+	background-color: rgb(10, 200, 100);
+	min-width:40%;
+	min-height: 4%;
+	border-radius: 10%;
+	opacity: 0.8;
+    margin-top: 10px;
+}
+
+.link-ingreso, .link-registro {
+	text-decoration: none;
+	margin-top: 15px;
+	text-align: left;
+	color: black;
+	padding: 3px;
+}
+
+.container-home-ingreso {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	align-self: flex-start;
+	margin-top: 7%;
+}

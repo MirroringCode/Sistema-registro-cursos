@@ -1,0 +1,46 @@
+1. Usuarios y contraseñas
+- miquios(admin) contraseña = super16
+- Diana(estudiante) contraseña = super12
+- Sandritá(estudiante) contraseña = sandra12
+- Annita02(estudiante) contraseña = super20
+- Carlitos(esudiante) contraseña = super182
+
+2. Este pequeño sistema es sencillo y basicamente cumple la función de Crear, Borrar, Editar y Leer datos
+almacenados en la base de datos. Tiene un sistema de registro de usuarios donde pueden registrar sus email, nombres
+de usuario, nombres y apellidos, además de la función de seguridad de encriptar las contraseñas al almacenarlas
+en la base de datos y funciones creadas con PHP para evitar duplicidad en el usuario y el email.
+
+3. Las opciones de Borrar y Editar para los usuarios con rol estudiante está limitada unicamente a manipular su
+cuenta, es decir pueden borrarla si asi lo desean (no sin antes de salirse de los cursos en que están inscritos, lo que
+también es una función de borrar), editar su perfil e inscribirse en un curso
+
+4. Las cuentas con rol admin tienen mas capacidades puesto que pueden ver los usuarios registrados, registrar nuevos
+profesores, materiales, crear nuevos cursos, asignar materiales al curso (evitando duplicidad, esto se hizo con PHP), borrar
+los datos mencionados anteriormente y otras capacidades (más que todo el crear, borrar, editar y leer). Y más importante los usuarios Admin
+tienen acceso a ciertas páginas que están restringidas a los usuarios Estudiantes, si un usuario estudiante intentara ingresar a una de esas páginas
+sería redirigido a la página principal del dashboard
+
+5. Ya que se utilizaron bases de datos relacionales, si un dato (por ejemplo un usuario quiere borrar su cuenta pero está inscrito en un curso 
+dentro de la tabla "usuario_y_curso") intenta borrarse, no va a permitirlo porque se ha restringido en PHPmyadmin para salvaguardar
+la integridad de los datos, antes de realizar esa operación el usuario tendría que salirse de los cursos en que está inscrito, en este 
+caso estaríamos utilizando una tabla con relacion de muchos a muchos (un usuario puede estar en varios cursos, un curso puede tener inscrito a
+varios usuarios).
+
+6. Las sentencias preparadas son una característica de PHP para ejecutar querys, que a diferencia de mysqli_query son perfectas para evitar la inyección SQL
+debido a que si se está utilizando un parametro proveniente de una solicitud GET o POST no entra directamente en el query si no que lo manda el servidor y también
+se especifica que tipo de dato se está utilizando, por ejemplo "i" corresponde a integer, "s" corresponde a string, si se están usando varios tendría que señalarse de esta forma:
+
+Tenemos que vamos a registrar un usuario, vamos a introducir la cedula y el nombre y apellido, una sentencia preparada podría quedar asi
+
+query = INSERT INTO tabla_usuarios VALUES(?, ?, ?) Los signos ? son como una plantilla que luego van a ser vinculadas a los datos correspondientes
+stmt = mysqli_stmt_init(conexion) conecta a la base de datos
+myslqi_stmt_prepare(stmt, query) señala que el query que declaramos va a ser utilizado
+mysqli_stmt_bind_param(stmt, "iss", cedula, nombre, apellido) aqui estamos uniendo los parametros que un usuario ingresa en un formulario por ejemplo
+y "iss" corresponde a cedula, nombre y apellido asi sucesivamente el primero es un integer y los dos ultimos son strings
+
+el ultimo comando que ejecuta el query y lo manda a la base de datos es 
+mysqli_stmt_execute(stmt)
+
+Más información sobre las sentencias preparadas: https://www.php.net/manual/es/mysqli.quickstart.prepared-statements.php
+
+Decidi usar este metodo como medida de mayor seguridad

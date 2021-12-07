@@ -1,0 +1,420 @@
+html {
+    font-family: 'Josefin Sans', Arial;
+    src: url(adm_fuentes/JosefinSans-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.75em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ========== diseño =========== */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ========== navegacion =========== */
+
+.navegacion {
+    /*background-color: #3b5998;*/
+    background-color: #335C81;
+    overflow: hidden;
+    display: flex; 
+    justify-content: space-between;
+
+    
+}
+
+.abrir-menu {
+     margin-top: 1.5em ; 
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #f2f2f2;
+    font-size: 1.25rem;
+    padding: 1.75em 1.5em; 
+}
+
+.navegacion a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.navegacion ul {
+    margin: .75em 0 1em 0;
+    list-style: none;
+}
+
+.navegacion li {
+    padding: .5em 1.5em;
+    padding-right: 0;
+}
+
+.barra-nav link {
+    margin-left: 0.25em;
+}
+
+.menu-sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #252527;
+    opacity: 0.9;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: .5em;
+    transition: 0.5s;
+   
+}
+
+.icono {
+    color: #e9e3e3;
+}
+
+
+.menu-sidebar a {
+    padding: 1em 1.5em;
+    margin-left: 1em;
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #e9e3e3;
+    padding-left: 0;
+    transition: 0.3s
+}
+
+.menu-sidebar a:hover,
+.menu-sidebar a:focus,
+.menu-sidebar .icono:hover {
+    color: #ada6a6;
+}
+
+.menu-sidebar .cerrar {
+    position: relative;
+    font-size: 1.6rem;
+    margin-left: 9em;
+
+}
+
+
+/* ========== contenido principal y tablas =========== */
+
+.contenedor-principal {
+    width: 76%;
+    padding: 0 .5em;
+    transition: margin-left 0.5s;
+}
+
+@media (min-width: 675px) {
+    .contenedor-principal {
+        padding: 0 2.5em;
+    }
+}
+
+.contenedor-dashboard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenedor-dashboard .item-dashboard{
+	width: 32%;
+	padding-bottom: 18%;
+	margin-bottom: 2%;
+	margin: 0 .25em .75em .25em;
+	text-align: center;
+}
+
+.item-dashboard {
+	display: flex;
+	flex-direction: column;
+	font-size: 1.3rem;
+	padding: 0;
+	
+}
+
+
+
+.item-dashboard a {
+	text-decoration: none;
+	margin-top: 1.5em;
+	color: #335C81;
+	margin-bottom: .5em;
+}
+
+.item-dashboard a:hover {
+	border-bottom: 1px solid #335C81;
+	
+}
+
+.item-dashboard i {
+	font-size: 1.75rem;
+}
+
+.contenedor-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-curso {
+    flex: 0 32%;
+    height: 15%;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 5em;
+}
+
+.item-curso a {
+    text-decoration: none;
+    color: #335C81;
+}
+
+.item-curso a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+
+.mensaje-exitoso {
+    text-decoration: none;
+    color: #335C81;                
+}
+
+.direccion-titulo p{
+    font-size: 1.5rem;
+}
+
+.contenedor-divisor {
+    margin: 1.5em 0;
+    border-bottom: #adadad solid 2px;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    margin: 1em 0;
+	border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    padding: .65em;
+    border: black 1px solid ;
+    
+}
+
+table thead tr {
+    text-align: left;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+
+table a {
+    text-decoration: none;
+}
+
+.tabla-perfil  th, .tabla-perfil td, .tabla-perfil table {
+    border: none;
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+}
+
+.tabla-perfil th, td {
+    padding: 1em;
+    text-align: left;
+}
+
+
+
+.boton-activo-cont {
+    display: flex;
+    justify-content: space-around;
+}
+
+.boton-activo {
+    text-decoration: none;
+    color: #3264a8;
+    padding: .5em;
+
+}
+
+.boton-activo:hover {
+    color: #1d16db;
+}
+
+.boton-borrar {
+    color: #e61725;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.boton-borrar:hover {
+    color: #8f000a;
+}
+
+.boton-cambio {
+    color: #335C81;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+}
+
+.boton-cambio:hover {
+    color: #2d4b66;
+}
+
+
+/* ========== Formularios =========== */
+
+
+.contenedor-principal-form {
+   
+    width: 70%;
+    margin: 0 auto;
+    color: #335C81;
+    position: relative; 
+    transition: 0.5s;
+
+
+}
+
+.contenedor-principal-form label {
+    font-style: normal;
+}
+
+.crear-curso input[type="text"],
+.crear-curso select,
+.crear-curso label,
+.crear-curso textarea,
+.crear-curso button[type="submit"] {
+    font: 400 1rem 'Josefin-sans', 'Arial';
+}
+
+
+.crear-profesor input[type="text"],
+.crear-profesor select,
+.crear-profesor label,
+.crear-profesor textarea,
+.crear-profesor button[type="submit"] {
+    font: 400 1rem 'Josefin-sans', 'Arial';
+}
+
+.crear-curso, .crear-profesor {
+    padding: 1.25em;
+    margin: 2.25em 4em;
+    /*box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);*/
+}
+
+.crear-curso h3,
+.crear-profesor h3 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+
+.crear-curso input[type="text"],
+.crear-curso textarea, 
+.crear-curso select, 
+.crear-curso input[type="file"] { 
+    width: 90%;
+    border: 1px solid #939693;
+    background: #FFF;
+    margin: 1em 1em;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.crear-profesor input[type="text"], 
+.crear-profesor select { 
+    width: 90%;
+    border: 1px solid #939693;
+    background: #FFF;
+    margin: 1em 1em;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+
+.crear-curso select, .crear-profesor select {
+    width: 93%;
+}
+
+.direccion-texto {
+    display: flex;
+    flex-direction: column;   
+    justify-content: center;
+}
+
+
+.crear-curso textarea{
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+.crear-curso button[type="submit"], 
+.crear-curso button[type="reset"] {
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    background: #335C81;
+    color: #FFF;
+    padding: .5em .25em;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+.crear-profesor button[type="submit"], 
+.crear-profesor button[type="reset"] {
+    cursor: pointer;
+    width: 30%;
+    border: none;
+    background: #335C81;
+    color: #FFF;
+    padding: .5em .25em;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-top: 1.75em;
+}
+
+.crear-curso button[type="submit"]:hover, 
+.crear-curso button[type="reset"]:hover {
+    background: #2d4b66;
+}
+
+.crear-profesor button[type="submit"]:hover, 
+.crear-profesor button[type="reset"]:hover {
+ background: #2d4b66;   
+}
+
+.direccion-botones {
+    display: flex;
+    justify-content: space-around;
+}
